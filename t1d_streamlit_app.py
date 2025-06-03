@@ -77,6 +77,7 @@ current = [visits_now, cost_now]
 target = [visits_target, cost_target]
 x = range(len(labels))
 
+# Bar chart comparison: current vs. target
 ax.bar(x, current, width=0.4, label="Nykyinen", align='center')
 ax.bar([p + 0.4 for p in x], target, width=0.4, label="Tavoite", align='center')
 ax.set_xticks([p + 0.2 for p in x])
