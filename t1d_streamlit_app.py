@@ -86,5 +86,10 @@ ax.set_title("Käynnit ja kustannukset: nykytila vs. tavoitetila")
 ax.legend()
 st.pyplot(fig)
 
-st.markdown("🔧 Tämä malli voidaan myös siirtää Exceliin, jos haluat jatkaa simulointia taulukkolaskennassa.")
+st.download_button(
+    label="📥 Lataa Excel-tiedostona",
+    data=to_excel(df),
+    file_name="t1d_malli.xlsx",
+    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+)
 
